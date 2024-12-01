@@ -1,0 +1,40 @@
+.search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: .6rem;
+    box-shadow: 0px 0px 10px 5px #473131;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding-left: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: .8rem;
+}
+
+i {
+    font-size: 1.5rem;
+    color: rgb(219 221 234);
+}
+
+@media screen and (max-width:894.1px) {
+    .search-area {
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* bottom: 0; */
+        top: 100%;
+        margin: 1rem 1rem;
+    }
+
+    .search-area {
+        min-width: 250px;
+    }
+}

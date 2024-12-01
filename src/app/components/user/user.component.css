@@ -1,0 +1,53 @@
+:host {
+    position: relative;
+    padding: 27px 0;
+    margin-right: 2%;
+    i {
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #F1F2FF;
+    border-radius: .4rem;
+    right: -80%;
+    z-index: 11;
+    top: 100%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    span {
+        width: max-content;
+        padding: .5rem 1.6rem;
+        &:hover {
+            background-color: #C5C7D4;
+            border-radius: .2rem;
+        }
+    }
+}
+
+.square {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #F1F2FF;
+    transform: rotate(45deg);
+    top: -12px;
+    left: 70%;
+    z-index: -1;
+}
+
+:host:hover .user {
+    opacity: 1;
+    width: 100%;
+    min-width: 150px;
+    padding: .8rem 1.2rem;
+    height: auto;
+    overflow: visible;
+}

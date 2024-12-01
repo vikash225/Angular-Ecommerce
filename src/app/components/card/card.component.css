@@ -1,0 +1,43 @@
+:host {
+    width: 100%;
+    max-width: 220px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    cursor: pointer;
+    margin: 1rem;
+    gap: .2rem;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 5px #cac6c6;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+.img-div img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+}
+
+:host:hover {
+    transform: scale(.9);
+}
+
+@media screen and (max-width:503.9px) {
+    :host {
+        max-width: 340px;
+    }
+}
+
+@media (min-width:504px) and (max-width:755.9px) {
+    :host {
+        width: 100%;
+        max-width: 40%;
+    }
+}

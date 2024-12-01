@@ -1,0 +1,13 @@
+<h3 (click)="HomePage()" id="header-text">Explore Our Collections</h3>
+<app-input />
+<div class="cart">
+  <div class="cartLength" routerLink="cart-items">
+    <i class="ri-shopping-cart-line"></i>
+    <span class="cart-span">
+      {{ Cartlength() }}
+    </span>
+  </div>
+  <!-- <span>Cart Items</span> -->
+  <app-category />
+  <app-user class="user" />
+</div>

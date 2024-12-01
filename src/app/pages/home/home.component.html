@@ -1,0 +1,14 @@
+
+
+@if(isDataFetching()){
+<app-test />
+} @else if(products().length) { @for(product of products(); track product.id){
+
+<app-card
+  [routerLink]="['/product/', product.id]"
+  (click)="SendingIdToService(product.id)"
+  [product]="product"
+/>
+} } @else {
+<h3>No Products Found</h3>
+}

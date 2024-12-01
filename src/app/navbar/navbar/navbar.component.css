@@ -1,0 +1,85 @@
+:host {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    height: 12%;
+    background-color: #000814;
+    gap: 1rem;
+}
+
+
+h3 {
+    color: rgb(219 221 234);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    gap: 1.3rem;
+    cursor: pointer;
+}
+
+.cart span {
+    padding-left: .3rem;
+    color: rgb(219 221 234);
+    font-size: 1.5rem;
+}
+
+.cart div i {
+    color: rgb(219 221 234);
+    font-size: 1.5rem;
+}
+
+.cartLength {
+    position: relative;
+}
+
+.cartLength span {
+    position: absolute;
+    top: -12px;
+    right: -11px;
+    color: red;
+}
+
+
+
+@media screen and (max-width:593.1px) {
+
+    :host {
+        gap: .5rem;
+    }
+
+    .cart div i {
+
+        font-size: 1.3rem;
+    }
+
+    .cart span {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .cartLength span {
+        top: -8px;
+        right: -8px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .cartLength {
+        display: none;
+    }
+}

@@ -1,0 +1,221 @@
+/* no items in page */
+.no-items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+section h1 {
+    font-size: 2.5rem;
+    width: 100%;
+
+    padding: 2% 5%;
+    color: #2b2a2a;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    min-height: 100%;
+    background-color: #b7cce8;
+}
+
+.Discount {
+    background-color: rgb(89, 89, 211);
+    color: #FFFFFF;
+    font-size: 2rem;
+    padding: 3% 1%;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 90%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 5px #a4a1a1;
+    margin-top: 1rem;
+}
+
+table thead tr {
+    border-bottom: 2px solid rgb(139, 132, 132);
+}
+
+table thead tr th {
+    color: #2b2a2a;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+}
+
+table tbody tr td {
+    padding: 1rem;
+    text-align: center;
+
+}
+
+table tbody tr {
+    border-bottom: 1px dashed rgb(139, 132, 132);
+}
+
+.inc,
+.dec {
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.price-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-item span {
+    padding: 0 .5rem;
+}
+
+.inc,
+.dec {
+    color: green;
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+.deletebtn span,
+i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 .5rem;
+
+}
+
+.deletebtn i {
+    color: red;
+}
+
+/* designing of comming content */
+.cart-img {
+    width: 100%;
+    max-width: 80px;
+    object-fit: contain;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease-in;
+}
+
+
+
+.cart-img:hover {
+    transform: scale(.9);
+
+}
+
+/* stylling in css while hovering */
+.hover-properties {
+    position: relative;
+    cursor: pointer;
+}
+
+.hover-text {
+    position: absolute;
+    top: 27%;
+    left: 31%;
+    color: gold;
+    font-size: 1.3rem;
+    z-index: 5;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .3s ease-in;
+}
+
+.hover-properties:hover .hover-text {
+    opacity: 1;
+
+}
+
+@media (min-width:480px) and (max-width:790px) {
+
+    table thead tr th {
+        font-size: 1rem;
+    }
+
+    table tbody tr td {
+        padding: .6rem;
+    }
+
+    .cart-img {
+        max-width: 80px;
+        height: 60px;
+    }
+
+    .price,
+    .zero-cart-price span,
+    i {
+        font-size: 1rem;
+    }
+
+    .inc,
+    .dec {
+        font-size: 1.5rem;
+    }
+
+    table thead tr th {
+        padding: .8rem 1.5rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    section h1 {
+        font-size: 1.4rem;
+    }
+
+    table thead tr th {
+        font-size: .8rem;
+    }
+
+    .Discount {
+        font-size: 1rem;
+    }
+
+    table tbody tr td {
+        padding: .4rem;
+    }
+
+    .cart-img {
+        max-width: 60px;
+        height: 60px;
+    }
+
+    .price,
+    .zero-cart-price span,
+    i {
+        font-size: .8rem;
+    }
+
+    .inc,
+    .dec {
+        font-size: 1.2rem;
+    }
+
+    table thead tr th {
+        padding: .8rem .5rem;
+    }
+}
+
+/* calculation part */

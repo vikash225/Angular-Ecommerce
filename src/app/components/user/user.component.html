@@ -1,0 +1,11 @@
+<i class="ri-user-fill"></i>
+<div class="user">
+  <div class="square"></div>
+  @if(isUserExist()){
+  <span>name</span>
+  <span (click)="Logout()">LogOut</span>
+  } @else {
+  <span routerLink="/login" >Login</span>
+  <span routerLink="/signup">signup</span>
+  }
+</div>

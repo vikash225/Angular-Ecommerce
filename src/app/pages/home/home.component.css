@@ -1,0 +1,16 @@
+:host {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #b7cce8;
+}
+
+@media screen and (max-width:894.1px){
+    :host{
+        margin-top: 66px;
+    }
+}
+h3{
+    margin:3rem 0;
+}

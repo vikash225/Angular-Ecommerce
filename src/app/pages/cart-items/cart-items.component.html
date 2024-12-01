@@ -1,0 +1,51 @@
+<section>
+  <h3 class="Discount">Shop for $500 and get 10% Discount on your order</h3>
+  <h1>Shopping Cart</h1>
+  @if(cartItems().length!==0){
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      @for(cart of cartItems();track cart.id ){
+
+      <tbody>
+        <tr>
+          <td>
+            <div class="hover-properties" (click)="PageNavigate(cart.id)">
+              <img class="cart-img" [src]="cart.image" alt="" />
+              <div class="hover-text">Click</div>
+            </div>
+          </td>
+          <td class="price">{{ cart.price | currency }}</td>
+          <td>
+            <div class="price-item">
+              @for(q of quantityInCart(); track q.id){ @if(q.id===cart.id){
+              <span class="inc" (click)="Inc(cart.id)">+</span>
+              <span>{{ q.count }}</span>
+              <span class="dec" (click)="Dec(cart.id)">-</span>
+              } }
+            </div>
+          </td>
+          <td class="deletebtn">
+            <i (click)="Remove(cart.id)" class="ri-delete-bin-6-line"></i>
+          </td>
+        </tr>
+      </tbody>
+
+      }
+    </table>
+  </div>
+  <app-calculation />
+  } @else {
+  <div class="no-items">
+    <app-button (click)="NaviageToHome()" [btnName]="'Go to Home Page'" />
+  </div>
+  }
+</section>
+

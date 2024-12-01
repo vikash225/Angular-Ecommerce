@@ -1,0 +1,48 @@
+
+@if(isDataFetching()){
+  <app-test/>
+}
+
+  <section>
+    <div class="img-with-text">     <!-- image-section -left-side -->
+      <div class="div-img"><img [src]="product()?.image" alt="" /></div>
+      <!-- rest all right sidr -->
+      <div class="right-content">
+        <p class="price"> Price {{ product()?.price | currency }}</p>
+        <p class="product-title">
+          {{ product()?.title  }}
+        </p>
+        <p id="description">Description</p>
+        <p>
+         
+          @if(isReadmore===false){
+            <p class="description">{{product()?.description?.substr(0,60)}}...<span class="readmore" (click)="ReadMore()">Readmore</span></p>
+          }
+          @else {
+            <p class="description">{{product()?.description}}<span class="readmore" (click)="ReadMore()">  Readless</span></p>
+          }
+        </p>
+        <p class="rating">
+         <app-rating [rating]="product()?.rating?.rate!"/>
+        </p>
+        <div class="cart-button">
+          @if(isIncart()){
+            <app-button (click)="GoToCart()" [btnName]="'Go to Cart'"/>
+          }
+          @else{
+            <app-button (click)="addToCart(product()?.id!)" [btnName]="'Add to Cart'"/>
+          }
+          <app-button [btnName]="'Buy Now'" />
+         </div>
+      </div>
+
+     
+      </div>
+      <!-- product based on categories  -->
+      <div class="similar"><p class="similar-left"></p><span>Similar Products</span><p class="similar-right"></p></div>
+      <div class="categories-product">
+        @for(product of categoryProducts(); track product.id){
+            <app-card [routerLink]="['/product/', product.id]" [product]="product"/>
+        }
+      </div>
+</section>

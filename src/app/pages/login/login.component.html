@@ -1,0 +1,40 @@
+<section>
+  <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-div-1">
+      <label for="email">User Email Id</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-div-2">
+      <label for="password">Password</label>
+      <input
+        [type]="isPassordVisible ? 'text' : 'password'"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+        formControlName="password"
+      />
+      <span class="eye-On-off" (click)="toggleEye()">
+        <i class="ri-eye-line eyeOn"></i>
+        <i
+          class="ri-eye-off-line eyeOff"
+          [class.textPassword]="isPassordVisible"
+        ></i>
+      </span>
+      <span><a href="">Forgot Password</a></span>
+    </div>
+    <div class="Login-SignUp">
+      <app-button btnName="Login" />
+      <app-button btnName="SignUp" (click)="Navigate()" />
+    </div>
+  </form>
+
+  <div class="Img-div">
+    <img src="assets/ecom.jpg" alt="" />
+  </div>
+</section>

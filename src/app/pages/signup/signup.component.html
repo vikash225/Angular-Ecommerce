@@ -1,0 +1,57 @@
+<section>
+  <form [formGroup]="form" action="" (ngSubmit)="onSubmit()">
+    <div class="name-div" formGroupName="names">
+      <div class="firstName">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          placeholder="Enter first Name"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="lastName">
+        <label for="lastName">First Name</label>
+        <input
+          type="text"
+          id="lastName"
+          placeholder="Enter last Name"
+          formControlName="lastName"
+        />
+      </div>
+    </div>
+    <div class="emailDiv">
+      <label for="email">Email Address</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="Enter email Address"
+        formControlName="email"
+      />
+    </div>
+    <div class="passwordDiv" formGroupName="passwords">
+      <div class="password">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          formControlName="password"
+        />
+      </div>
+      <div class="confirmPassword">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          formControlName="confirmPassword"
+        />
+      </div>
+    </div>
+    @if(form.get('passwords')?.hasError('passwordMissMatch')){
+    <p class="passwordValidation">Passwords do not match</p>
+    }
+    <app-button btnName="SignUp" />
+  </form>
+</section>

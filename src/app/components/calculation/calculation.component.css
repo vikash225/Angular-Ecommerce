@@ -1,0 +1,78 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 350px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 5px #cac6c6;
+    padding: 1rem;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+header {
+    height: 30px;
+    border-bottom: 1px dashed #f0f0f0;
+    min-height: 21px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #878787;
+}
+
+.price,
+.discount,
+.delivery-chargs {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    gap: 5%;
+}
+
+.discount:nth-last-of-type() {
+    color: #388e3c;
+}
+
+.buyBtn {
+    margin-top: 5%;
+}
+
+.div-totalAmount {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+.div-totalAmount {
+    border-top: 1.5px dashed #d0d0d0;
+    border-bottom: 1.5px dashed #d0d0d0;
+    padding-bottom: 5%;
+}
+
+#through-line {
+    color: black;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+#Free{
+    color: #388e3c;;
+
+}
+
+@media screen and (max-width:481px) {
+
+    .price p,
+    .discount p,
+    .delivery-chargs p,
+    .div-totalAmount p {
+        font-size: .8rem;
+    }
+}

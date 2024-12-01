@@ -1,0 +1,28 @@
+<section>
+  <div class="container">
+    <header>Price Details</header>
+    <div class="price-related">
+      <div class="price">
+        <p>
+          Price <Span>({{ numberOfItemsInCart().length }} item ) </Span>
+        </p>
+        <p>{{ totalAmount().toFixed(2) |currency}}</p>
+      </div>
+      <div class="discount">
+        <p>Discount</p>
+        <p>0</p>
+      </div>
+      <div class="delivery-chargs">
+        <p>Delivery Charges</p>
+        <p> <span id="through-line">$50</span><span id="Free">Free</span></p>
+      </div>
+    </div>
+    <div class="div-totalAmount">
+      <p>Total Amount</p>
+      <p>{{ totalAmount().toFixed(2) | currency}}</p>
+    </div>
+    <div class="buyBtn">
+      <app-button [btnName]="'Place Order'" />
+    </div>
+  </div>
+</section>

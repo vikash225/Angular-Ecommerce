@@ -1,0 +1,25 @@
+fa-icon {
+    color: gray;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.rated {
+    color: orange;
+    transition: color 0.3s ease-in-out;
+}
+
+span {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+}
+.rating{
+    
+    font-weight: 500;
+}
+:host{
+    display: flex;
+    justify-content: flex-start;
+}
